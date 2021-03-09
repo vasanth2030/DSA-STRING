@@ -14,23 +14,16 @@ public class leftmostrepeatingcharacter {
         int firstIndex[]=new int[256];
         Arrays.fill(firstIndex,-1);
         char s1[]=s.toCharArray();
-        for(int i=0;i<s1.length;i++)
+        for(int i=s1.length-1;i>=0;i--)
         {
             if(firstIndex[s1[i]]==-1)
                 firstIndex[s1[i]]=i;
             else
-                res= min(res,firstIndex[s1[i]]);
+                res= i;
         }
         if(res==Integer.MAX_VALUE)
             return -1;
         else
             return res;
-    }
-    static int min(int a,int b)
-    {
-        if(a<b)
-            return a;
-        else
-            return b;
     }
 }
