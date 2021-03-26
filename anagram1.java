@@ -9,15 +9,16 @@ public class anagram1 {
         System.out.println("Enter second string");
         String s2=s.nextLine();
         if (anagramornot(s1,s2))
-             System.out.println("Yes");
+            System.out.println("Yes");
         else
-        System.out.println("No");
+            System.out.println("No");
     }
     static boolean anagramornot(String s1, String s2)
     {
         if(s1.length()!=s2.length())
             return false;
         int count[]=new int[26];
+        Arrays.fill(count,0);
         char[] s1a =s1.toCharArray();
         char[] s2a=s2.toCharArray();
         for(int i=0;i<s1a.length;i++)
