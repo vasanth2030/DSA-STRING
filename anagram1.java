@@ -18,18 +18,18 @@ public class anagram1 {
     {
         if(s1.length()!=s2.length())
             return false;
-        int count[]=new int[256];
+        int count[]=new int[26];
         char[] s1a =s1.toCharArray();
         char[] s2a=s2.toCharArray();
         for(int i=0;i<s1a.length;i++)
         {
-            count[s1a[i]]++;
+            count[s1a[i]-'a']++;
         }
         for(int i=0;i<s2a.length;i++)
         {
-            count[s2a[i]]--;
+            count[s2a[i]-'a']--;
         }
-        for(int i=0;i<256;i++)
+        for(int i=0;i<26;i++)
         {
             if(count[i]!=0)
                 return false;
