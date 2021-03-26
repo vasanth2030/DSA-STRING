@@ -1,5 +1,4 @@
 package Strings;
-import com.sun.deploy.security.SelectableSecurityManager;
 import java.util.*;
 import java.util.Scanner;
 public class anagram1 {
